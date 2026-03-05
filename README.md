@@ -10,6 +10,7 @@ Built with Next.js 16, Tailwind CSS v4, React Three Fiber, Three.js, and GSAP.
 - **MDX Content System**: File-based project content using gray-matter frontmatter parsing and remark for Markdown-to-HTML conversion. 6 project entries with structured metadata (title, description, role, period, tags, order).
 - **Projects List Page**: Responsive card grid (1/2/3 columns) with hover animations, gradient thumbnails, and tech tags. Cards link to individual project detail pages.
 - **Project Detail Pages**: Static generation via `generateStaticParams`. MDX content rendered with `@tailwindcss/typography` prose styling. Back navigation, metadata tags, period/role display.
+- **Homepage Sections**: Scroll indicator with animated mouse icon and bounce arrow below the hero. Projects preview section showing the first 3 projects in a responsive grid with a link to the full projects page.
 
 ## Tech Stack
 
@@ -46,6 +47,9 @@ src/
       [slug]/
         page.tsx       # Project detail page (SSG)
   components/
+    home/
+      ScrollIndicator.tsx  # Animated scroll-down indicator
+      ProjectsPreview.tsx  # Projects preview section (first 3)
     layout/
       Header.tsx       # Navigation header
       Footer.tsx       # Site footer
