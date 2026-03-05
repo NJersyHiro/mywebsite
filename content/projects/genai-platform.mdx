@@ -1,0 +1,24 @@
+---
+title: "生成AI共通基盤"
+description: "複数部署で生成AIを活用できる共通基盤。KubernetesカスタムオペレーターをGoで開発し、OpenShift上で運用。"
+role: "インフラ／バックエンドエンジニア"
+period: "2024/1 - 2025/3（17ヶ月）"
+tags: ["Go", "Operator SDK", "Kubernetes", "OpenShift", "Lustre"]
+thumbnail: "/images/projects/genai-platform.png"
+order: 4
+---
+
+## プロジェクト概要
+
+全社横断で複数部署が生成AIを活用できる共通基盤の構築プロジェクト。30名規模のチームで、Kubernetesカスタムオペレーターによるワークロード管理、高速ストレージによるモデル配信基盤を開発。
+
+## 担当範囲
+
+Go + Operator SDKを用いたKubernetesカスタムオペレーターの設計・開発、Red Hat OpenShift上でのクラスタ運用、Lustre高速ストレージの統合を担当。
+
+## 技術的なポイント
+
+- **Kubernetesカスタムオペレーター**: Operator SDKを用いてGoでカスタムコントローラーを開発。生成AIワークロードのライフサイクル（デプロイ・スケーリング・ヘルスチェック・ローリングアップデート）を自動管理
+- **Red Hat OpenShift運用**: エンタープライズグレードのOpenShiftクラスタ上でマルチテナント環境を構築。RBAC・ネットワークポリシー・リソースクォータによる安全な分離を実現
+- **Lustre高速ストレージ統合**: 大規模言語モデルのロード時間短縮のため、Lustre並列ファイルシステムをPersistent Volumeとして統合。モデルの共有キャッシュ機構を実装
+- **30名チームでのアジャイル開発**: 大規模チームでのスクラム開発に参加。コードレビュー・設計レビューを通じた品質管理プロセスに従事
