@@ -11,6 +11,7 @@ Built with Next.js 16, Tailwind CSS v4, React Three Fiber, Three.js, and GSAP.
 - **Projects List Page**: Responsive card grid (1/2/3 columns) with hover animations, gradient thumbnails, and tech tags. Cards link to individual project detail pages.
 - **Project Detail Pages**: Static generation via `generateStaticParams`. MDX content rendered with `@tailwindcss/typography` prose styling. Back navigation, metadata tags, period/role display.
 - **Homepage Sections**: Scroll indicator with animated mouse icon and bounce arrow below the hero. Projects preview section showing the first 3 projects in a responsive grid with a link to the full projects page.
+- **About Page**: Bio, certifications, and skills visualization. Animated skill bars with IntersectionObserver-triggered progress animation, gradient fills, and duration labels in Japanese. Certification badges with hover effects. Skills organized by category in a responsive 2-column grid.
 
 ## Tech Stack
 
@@ -42,11 +43,16 @@ src/
     page.tsx           # Home page
     layout.tsx         # Root layout
     globals.css        # Tailwind v4 theme config
+    about/
+      page.tsx         # About page with bio, certs, skills
     projects/
       page.tsx         # Projects list page
       [slug]/
         page.tsx       # Project detail page (SSG)
   components/
+    about/
+      SkillBar.tsx     # Animated skill progress bar with IntersectionObserver
+      CertBadge.tsx    # Certification badge with hover effect
     home/
       ScrollIndicator.tsx  # Animated scroll-down indicator
       ProjectsPreview.tsx  # Projects preview section (first 3)
