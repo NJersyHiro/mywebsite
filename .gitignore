@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.firecrawl/
+
+# Temp files
+*.png
+errors.log
+pre-log.json
+post-log.json
+.playwright-mcp/
