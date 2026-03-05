@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,7 +39,9 @@ export default function RootLayout({
         className={`${inter.variable} ${notoSansJP.variable} ${jetbrainsMono.variable} font-sans antialiased`}
         style={{ fontFamily: "var(--font-inter), var(--font-noto-sans-jp), sans-serif" }}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
