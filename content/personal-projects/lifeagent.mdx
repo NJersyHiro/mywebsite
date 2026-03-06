@@ -1,0 +1,26 @@
+---
+title: "LifeAgent"
+description: "パーソナル生産性アシスタント。自然言語からカレンダー・ToDo自動作成、Gmail自動返信、レシートOCR支出管理を統合。"
+tags: ["Next.js 15", "Prisma", "OpenAI", "Google Calendar API", "Gmail API", "PWA"]
+github: "https://github.com/NJersyHiro/lifeagent"
+order: 4
+---
+
+## プロジェクト概要
+
+自然言語処理を使用してカレンダーイベントやToDoを自動作成し、Gmail監視・自動返信、支出管理機能を提供するフルスタックWebアプリケーション。
+
+## 主な機能
+
+- **スマートスケジューリング**: 自然言語テキストの解析（例：「来週火曜日13時に歯医者」）でイベント・ToDo自動分類
+- **Gmail統合**: メール自動監視、AI生成による自動返信下書き作成、リアルタイム通知
+- **支出管理**: レシート画像のOCR自動解析、カテゴリ別支出分析、CSVエクスポート
+- **PWA対応**: オフラインサポート付きプログレッシブWebアプリ
+
+## 技術的なポイント
+
+- **フロントエンド**: Next.js 15 App Router + TypeScript + Tailwind CSS
+- **AI処理**: OpenAI APIによる自然言語解析・メール返信生成
+- **Google API連携**: Calendar API, Gmail API, Cloud Vision API（OCR）
+- **認証**: NextAuth.js + Google OAuthによる安全なトークン管理
+- **データベース**: Prisma ORM + SQLite

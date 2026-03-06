@@ -1,0 +1,27 @@
+---
+title: "議事録AI"
+description: "会議議事録自動生成Webアプリ。ブラウザ録音・ファイルアップロードからGemini AIで議事録を自動作成。本番稼働中。"
+tags: ["Python", "Flask", "Gemini API", "Supabase", "Stripe", "Fly.io"]
+github: "https://github.com/NJersyHiro/gijiroku"
+order: 2
+---
+
+## プロジェクト概要
+
+動画ファイルまたはブラウザ録音から、Google Gemini APIで自動的に議事録を作成するWebアプリ。本番環境でデプロイ済み。
+
+## 主な機能
+
+- **ブラウザ録音**: 録音ボタンで会議を直接録音、停止と同時に自動で議事録生成
+- **ファイルアップロード**: MP3/WAV/WebM/OGG/M4A/MP4/MKV/AVI/MOV対応
+- **リアルタイム進捗**: 処理状況をリアルタイムで確認
+- **カスタムプロンプト**: 用途に応じたプロンプトを追加・選択可能
+- **サブスクリプション課金**: Stripe連携のクレジット制課金システム
+
+## 技術的なポイント
+
+- **AI処理**: Google Gemini APIによる高精度な音声解析・議事録生成
+- **認証**: Supabase AuthによるGoogleログイン
+- **課金**: Stripe統合によるクレジット制の従量課金
+- **デプロイ**: Fly.ioでの本番運用
+- **音声変換**: ffmpegによるマルチフォーマット対応

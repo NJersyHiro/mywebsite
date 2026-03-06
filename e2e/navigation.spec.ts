@@ -17,7 +17,8 @@ test.describe("Navigation", () => {
     const navLinks = page.locator("header nav ul li a");
     await expect(navLinks.nth(0)).toHaveAttribute("href", "/");
     await expect(navLinks.nth(1)).toHaveAttribute("href", "/projects");
-    await expect(navLinks.nth(2)).toHaveAttribute("href", "/about");
+    await expect(navLinks.nth(2)).toHaveAttribute("href", "/personal-projects");
+    await expect(navLinks.nth(3)).toHaveAttribute("href", "/about");
   });
 
   test("should navigate to Projects page", async ({ page }) => {

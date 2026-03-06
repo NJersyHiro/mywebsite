@@ -1,0 +1,27 @@
+---
+title: "YTScript"
+description: "YouTube動画の文字起こし＆AI要約SaaSアプリ。Free/Proプラン、Stripe課金、バッチ処理対応のフルスタックWebアプリケーション。"
+tags: ["Next.js", "Express", "PostgreSQL", "Prisma", "OpenAI", "Stripe"]
+github: "https://github.com/NJersyHiro/ytscript"
+order: 1
+---
+
+## プロジェクト概要
+
+YouTube動画のトランスクリプトを抽出し、AIによる要約・分析を提供するSaaSプラットフォーム。Free/Proの2プラン構成で、Stripe決済を統合。
+
+## 主な機能
+
+- **トランスクリプト抽出**: 10言語以上に対応したYouTube動画の文字起こし
+- **AI要約**: OpenAI GPT-4による高精度な要約・分析
+- **バッチ処理**: チャンネル・プレイリスト単位での一括処理（Pro）
+- **マルチフォーマット出力**: TXT, SRT, JSON, PDF, DOCX, XLSX対応
+- **クラウドストレージ**: 90日間のデータ保存と検索機能（Pro）
+
+## 技術的なポイント
+
+- **フロントエンド**: Next.js 14 + React 18 + TypeScript + Tailwind CSS
+- **バックエンド**: Express.js 5 + TypeScript + Prisma ORM
+- **認証**: NextAuth.js（Google OAuth）+ JWT
+- **決済**: Stripe統合によるサブスクリプション管理
+- **文字起こし**: yt-dlpによる高精度トランスクリプト取得

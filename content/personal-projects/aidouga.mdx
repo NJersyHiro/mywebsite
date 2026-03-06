@@ -1,0 +1,27 @@
+---
+title: "AI動画自動生成"
+description: "Amazonトレンド商品を自動リサーチし、Veo 3.1でAI動画生成、YouTube Shorts/TikTokへ自動投稿する完全自動パイプライン。"
+tags: ["Python", "Veo 3.1", "Gemini API", "YouTube Data API", "Playwright"]
+github: "https://github.com/NJersyHiro/aidouga"
+order: 7
+---
+
+## プロジェクト概要
+
+トレンドのAmazon商品をリサーチし、AI動画コンテンツを自動生成してYouTube ShortsとTikTokに投稿する完全自動化パイプライン。
+
+## 主な機能
+
+- **トレンド商品発見**: Playwrightでamazon.comのトレンド商品を自動スクレイピング
+- **AIプロンプト生成**: Gemini APIで動画用プロンプトを自動生成
+- **AI動画生成**: Veo 3.1 APIによる高品質な動画コンテンツ生成
+- **YouTube自動投稿**: YouTube Data API v3でShorts動画を自動アップロード
+- **TikTokクロスポスト**: Playwright自動化によるTikTok Studio投稿
+- **重複検出**: SQLiteで投稿済み商品を管理、重複を防止
+
+## 技術的なポイント
+
+- **Veo 3.1 API**: Google最新の動画生成AI（google-genai SDK）を活用
+- **Playwright自動化**: ブラウザ操作の完全自動化（商品スクレイピング + TikTok投稿）
+- **cron**: 毎日の自動実行スケジューリング
+- **アフィリエイト連携**: 動画コメントにアフィリエイトリンクを自動投稿

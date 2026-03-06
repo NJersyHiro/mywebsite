@@ -1,0 +1,27 @@
+---
+title: "AIキャリア分析"
+description: "履歴書・職務経歴書をAI分析し、3つのキャリアパス（転職・フリーランス・起業）を提案。年収予測・スキルマッチング機能付き。"
+tags: ["FastAPI", "React", "PostgreSQL", "Celery", "Gemini API", "Docker"]
+github: "https://github.com/NJersyHiro/ai-career-discovery-assistant"
+order: 6
+---
+
+## プロジェクト概要
+
+日本の求職者向けのAIキャリア分析システム。履歴書や職務経歴書をアップロードすることで、AIが分析し最適なキャリアパスを提案。
+
+## 主な機能
+
+- **書類分析**: PDF/Word形式の履歴書・職務経歴書を自動分析
+- **OCR対応**: スキャンされたPDFも自動でテキスト抽出
+- **AIキャリア提案**: 企業転職・フリーランス・起業の3パスを提案
+- **スキルマッチング**: 経験・スキルと求人市場のマッチング度計算
+- **年収予測**: 各キャリアパスでの想定年収レンジを提示
+
+## 技術的なポイント
+
+- **バックエンド**: FastAPI（Python 3.11）+ Celery非同期タスク処理
+- **フロントエンド**: React 18 + TypeScript + Ant Design + Tailwind CSS
+- **AI**: Google Gemini APIによる高精度な書類分析・キャリア提案
+- **インフラ**: Docker & Docker Compose + MinIO（S3互換ストレージ）
+- **キャッシュ**: Redisによるタスクキューとキャッシング

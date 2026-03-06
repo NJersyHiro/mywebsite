@@ -30,7 +30,7 @@ test.describe("Homepage", () => {
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(500);
 
-    const projectsHeading = page.locator("text=開発実績");
+    const projectsHeading = page.getByText("開発実績", { exact: true });
     await expect(projectsHeading).toBeVisible();
   });
 
@@ -45,6 +45,30 @@ test.describe("Homepage", () => {
     await page.waitForTimeout(500);
 
     const cards = page.locator('a[href^="/projects/"]');
+    const count = await cards.count();
+    expect(count).toBeLessThanOrEqual(3);
+    expect(count).toBeGreaterThan(0);
+  });
+
+  test("should display personal projects preview section", async ({ page }) => {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(500);
+
+    const heading = page.locator("text=個人開発実績");
+    await expect(heading).toBeVisible();
+  });
+
+  test("should display 'すべての個人プロジェクトを見る' link", async ({ page }) => {
+    const link = page.locator("text=すべての個人プロジェクトを見る");
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute("href", "/personal-projects");
+  });
+
+  test("should show at most 3 personal project cards in preview", async ({ page }) => {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(500);
+
+    const cards = page.locator('a[href^="/personal-projects/"]');
     const count = await cards.count();
     expect(count).toBeLessThanOrEqual(3);
     expect(count).toBeGreaterThan(0);
