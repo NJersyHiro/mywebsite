@@ -3,7 +3,7 @@ import PersonalProjectCard from "@/components/projects/PersonalProjectCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Personal Projects | HY Portfolio",
+  title: "Personal Projects | Hiromichi Yamamoto",
   description:
     "山本浩裕の個人開発プロジェクト一覧。AI・自動化・フルスタックの個人開発実績を紹介。",
 };

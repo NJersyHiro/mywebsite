@@ -3,7 +3,7 @@ import SkillBar from "@/components/about/SkillBar";
 import CertBadge from "@/components/about/CertBadge";
 
 export const metadata: Metadata = {
-  title: "About | HY",
+  title: "About | Hiromichi Yamamoto",
   description:
     "山本浩裕 - AIを製品として組み込めるフルスタックエンジニア。経歴・スキル・資格の紹介。",
 };
@@ -16,6 +16,7 @@ const certifications = [
   "CCNA",
   "Salesforce Platform Admin",
   "Salesforce Agentforce Specialist",
+  "TOEIC 915",
 ];
 
 const skillCategories = [
@@ -33,6 +34,7 @@ const skillCategories = [
     label: "フレームワーク",
     skills: [
       { name: "React", months: 9 },
+      { name: "Salesforce Flow/Lightning", months: 7 },
       { name: "NestJS", months: 5 },
       { name: "Electron", months: 5 },
       { name: "Next.js", months: 4 },
@@ -44,6 +46,7 @@ const skillCategories = [
       { name: "LLM API設計 (Gemini/OpenAI)", months: 11 },
       { name: "プロンプトエンジニアリング", months: 11 },
       { name: "AIエージェント設計", months: 5 },
+      { name: "AI Builder (ドキュメント処理)", months: 5 },
     ],
   },
   {
@@ -51,6 +54,7 @@ const skillCategories = [
     skills: [
       { name: "PostgreSQL", months: 16 },
       { name: "MongoDB", months: 5 },
+      { name: "Dataverse", months: 5 },
     ],
   },
   {
@@ -64,10 +68,11 @@ const skillCategories = [
     ],
   },
   {
-    label: "DevOps",
+    label: "DevOps/自動化",
     skills: [
       { name: "Git", months: 32 },
       { name: "GitHub Actions", months: 16 },
+      { name: "Power Automate", months: 5 },
     ],
   },
 ];

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t border-white/5 py-8 mt-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-text-sub text-sm">
-          &copy; {new Date().getFullYear()} HY - 山本浩裕
+          &copy; {new Date().getFullYear()} Hiromichi Yamamoto
         </p>
         <div className="flex gap-6">
           <a

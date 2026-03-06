@@ -7,12 +7,25 @@ test.describe("Projects Page", () => {
 
   test("should display page title and subtitle", async ({ page }) => {
     await expect(page.locator("h1")).toContainText("Projects");
-    await expect(page.locator("text=開発実績")).toBeVisible();
+    await expect(page.getByText("開発実績", { exact: true })).toBeVisible();
   });
 
-  test("should display 6 project cards", async ({ page }) => {
+  test("should display work projects section", async ({ page }) => {
+    await expect(page.locator("text=業務開発実績")).toBeVisible();
+  });
+
+  test("should display personal projects section", async ({ page }) => {
+    await expect(page.locator("text=個人開発実績")).toBeVisible();
+  });
+
+  test("should display 6 work project cards", async ({ page }) => {
     const cards = page.locator('a[href^="/projects/"]');
     await expect(cards).toHaveCount(6);
+  });
+
+  test("should display 10 personal project cards", async ({ page }) => {
+    const cards = page.locator('a[href^="/personal-projects/"]');
+    await expect(cards).toHaveCount(10);
   });
 
   test("should display SKOSH project card", async ({ page }) => {
@@ -25,18 +38,32 @@ test.describe("Projects Page", () => {
     await expect(aiVideoCard).toBeVisible();
   });
 
-  test("should display tech tags on project cards", async ({ page }) => {
-    const tags = page.locator('[class*="rounded-full"][class*="text-neon-purple"]');
+  test("should display tech tags on work project cards", async ({ page }) => {
+    const tags = page.locator(
+      '[class*="rounded-full"][class*="text-neon-purple"]'
+    );
     const count = await tags.count();
     expect(count).toBeGreaterThan(0);
   });
 
-  test("should navigate to project detail on card click", async ({ page }) => {
-    const firstCard = page.locator('article').first().locator('..');
+  test("should navigate to work project detail on card click", async ({
+    page,
+  }) => {
+    const firstCard = page.locator('a[href^="/projects/"]').first();
     await firstCard.click();
 
     await page.waitForURL(/\/projects\/.+/);
     await expect(page.locator("text=← Projects")).toBeVisible();
+  });
+
+  test("should navigate to personal project detail on card click", async ({
+    page,
+  }) => {
+    const firstCard = page.locator('a[href^="/personal-projects/"]').first();
+    await firstCard.click();
+
+    await page.waitForURL(/\/personal-projects\/.+/);
+    await expect(page.locator("text=← Personal Projects")).toBeVisible();
   });
 });
 

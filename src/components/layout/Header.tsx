@@ -6,7 +6,6 @@ import Link from "next/link";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/personal-projects", label: "Personal" },
   { href: "/about", label: "About" },
 ];
 
@@ -17,7 +16,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-neon-blue">
-          HY
+          Hiromichi Yamamoto
         </Link>
 
         {/* Desktop nav */}

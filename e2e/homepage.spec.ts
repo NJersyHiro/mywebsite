@@ -5,14 +5,14 @@ test.describe("Homepage", () => {
     await page.goto("/");
   });
 
-  test("should display the hero section with HY title", async ({ page }) => {
+  test("should display the hero section with name", async ({ page }) => {
     const heading = page.locator("h1");
     await expect(heading).toBeVisible();
-    await expect(heading).toContainText("HY");
+    await expect(heading).toContainText("Hiromichi Yamamoto");
   });
 
-  test("should display subtitle with name and role", async ({ page }) => {
-    const subtitle = page.locator("text=山本浩裕 | AI × Full-Stack Engineer");
+  test("should display subtitle with role", async ({ page }) => {
+    const subtitle = page.locator("text=AI × Full-Stack Engineer");
     await expect(subtitle).toBeVisible();
   });
 

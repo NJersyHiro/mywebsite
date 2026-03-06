@@ -48,7 +48,7 @@ test.describe("Responsive Design", () => {
     await page.goto("/");
 
     const navLinks = page.locator("header nav ul.hidden.md\\:flex li a");
-    await expect(navLinks).toHaveCount(4);
+    await expect(navLinks).toHaveCount(3);
   });
 
   test("tablet: projects grid should be 2 columns", async ({ page }) => {

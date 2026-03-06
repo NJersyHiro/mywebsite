@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HY | AI × Full-Stack Engineer",
+  title: "Hiromichi Yamamoto | AI × Full-Stack Engineer",
   description:
     "山本浩裕のポートフォリオサイト。AIを製品として組み込めるフルスタックエンジニア。",
 };

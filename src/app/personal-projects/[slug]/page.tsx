@@ -26,7 +26,7 @@ export async function generateMetadata({
     return { title: "Project Not Found" };
   }
   return {
-    title: `${project.title} | HY Portfolio`,
+    title: `${project.title} | Hiromichi Yamamoto`,
     description: project.description,
   };
 }

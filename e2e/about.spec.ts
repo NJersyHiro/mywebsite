@@ -19,7 +19,7 @@ test.describe("About Page", () => {
     await expect(tagline.first()).toBeVisible();
   });
 
-  test("should display all 7 certifications", async ({ page }) => {
+  test("should display all 8 certifications", async ({ page }) => {
     const certifications = [
       "応用情報技術者",
       "AWS SAP",
@@ -28,6 +28,7 @@ test.describe("About Page", () => {
       "CCNA",
       "Salesforce Platform Admin",
       "Salesforce Agentforce Specialist",
+      "TOEIC 915",
     ];
 
     for (const cert of certifications) {
@@ -65,6 +66,6 @@ test.describe("About Page", () => {
   test("should have correct page metadata", async ({ page }) => {
     const title = await page.title();
     expect(title).toContain("About");
-    expect(title).toContain("HY");
+    expect(title).toContain("Hiromichi Yamamoto");
   });
 });

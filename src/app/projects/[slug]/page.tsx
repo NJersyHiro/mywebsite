@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Project Not Found" };
   }
   return {
-    title: `${project.title} | HY Portfolio`,
+    title: `${project.title} | Hiromichi Yamamoto`,
     description: project.description,
   };
 }

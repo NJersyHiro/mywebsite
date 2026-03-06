@@ -8,7 +8,7 @@ test.describe("Navigation", () => {
     await expect(header).toBeVisible();
 
     const logo = page.locator("header a[href='/']").first();
-    await expect(logo).toContainText("HY");
+    await expect(logo).toContainText("Hiromichi Yamamoto");
   });
 
   test("should have correct navigation links", async ({ page }) => {
@@ -17,8 +17,7 @@ test.describe("Navigation", () => {
     const navLinks = page.locator("header nav ul li a");
     await expect(navLinks.nth(0)).toHaveAttribute("href", "/");
     await expect(navLinks.nth(1)).toHaveAttribute("href", "/projects");
-    await expect(navLinks.nth(2)).toHaveAttribute("href", "/personal-projects");
-    await expect(navLinks.nth(3)).toHaveAttribute("href", "/about");
+    await expect(navLinks.nth(2)).toHaveAttribute("href", "/about");
   });
 
   test("should navigate to Projects page", async ({ page }) => {
@@ -45,7 +44,7 @@ test.describe("Navigation", () => {
     await page.locator("header a[href='/']").first().click();
     await page.waitForURL("/");
 
-    await expect(page.locator("h1")).toContainText("HY");
+    await expect(page.locator("h1")).toContainText("Hiromichi Yamamoto");
   });
 
   test("should display footer with copyright", async ({ page }) => {
@@ -53,7 +52,7 @@ test.describe("Navigation", () => {
 
     const footer = page.locator("footer");
     await expect(footer).toBeVisible();
-    await expect(footer).toContainText("HY - 山本浩裕");
+    await expect(footer).toContainText("Hiromichi Yamamoto");
     await expect(footer).toContainText("2026");
   });
 
